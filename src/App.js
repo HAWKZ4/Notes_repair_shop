@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Public from "./components/Public";
-import Login from "./components/features/auth/Login";
+import Login from "./features/auth/Login";
 import DashLayout from "./components/dashboard/DashLayout";
-import Welcome from "./components/features/auth/Welcome";
-import NotesList from "./components/features/notes/NotesList";
-import UsersList from "./components/features/users/UsersList";
+import Welcome from "./features/auth/Welcome";
+import NotesList from "./features/notes/NotesList";
+import UsersList from "./features/users/UsersList";
 
 function App() {
   return (
