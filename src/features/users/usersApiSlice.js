@@ -8,11 +8,10 @@ const initialState = usersAdapter.getInitialState();
 export const usersApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getUsers: builder.query({
-      query: () => "/users",  
+      query: () => "/users",
       validateStatus: (response, result) => {
         return response.status === 200 && !result.isError;
       },
-      keepUnusedDataFor: 5,
       transformResponse: (responseData) => {
         const loadedUsers = responseData.map((user) => {
           user.id = user._id;
@@ -31,11 +30,44 @@ export const usersApiSlice = apiSlice.injectEndpoints({
         }
       },
     }),
+    addNewUser: builder.mutation({
+      query: (UserData) => ({
+        url: "/users",
+        method: "POST",
+        body: {
+          ...UserData,
+        },
+      }),
+      invalidatesTags: [{ type: "User", id: "LIST" }],
+    }),
+    updateUser: builder.mutation({
+      query: (UserData) => ({
+        url: "/users",
+        method: "PATCH",
+        body: {
+          ...UserData,
+        },
+      }),
+      invalidatesTags: (result, error, arg) => [{ type: "User", id: arg.id }],
+    }),
+    deleteUser: builder.mutation({
+      query: ({ id }) => ({
+        url: "/users",
+        method: "DELETE",
+        body: { id },
+      }),
+      invalidatesTags: (result, error, arg) => [{ type: "User", id: arg.id }],
+    }),
   }),
 });
 
 // This hook returns an object with various properties and methods related to the query, such as isLoading, isError, data ,  ...
-export const { useGetUsersQuery } = usersApiSlice;
+export const {
+  useGetUsersQuery,
+  useAddNewUserMutation,
+  useUpdateUserMutation,
+  useDeleteUserMutation,
+} = usersApiSlice;
 
 // return the query result object
 export const selectUsersResult = usersApiSlice.endpoints.getUsers.select();
