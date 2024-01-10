@@ -11,8 +11,6 @@ const EditUser = () => {
   const content = user ? <EditUserForm user={user} /> : <p>Loading...</p>;
 
   return content;
-
-  return <div>EditUser</div>;
 };
 
 export default EditUser;
