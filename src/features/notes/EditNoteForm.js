@@ -4,8 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSave, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import useAuth from "../../hooks/useAuth";
+import useTitle from "../../hooks/useTitle";
 
 const EditNoteForm = ({ note, users }) => {
+  useTitle("Edit Note");
   const { isAdmin, isManager } = useAuth();
 
   const [updateNote, { isLoading, isSuccess, isError, error }] =
