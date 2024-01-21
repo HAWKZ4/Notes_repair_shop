@@ -49,7 +49,9 @@ const Login = () => {
       } else {
         setErrMsg(err.data?.message);
       }
-      errRef.current.focus();
+      setTimeout(() => {
+        errRef.current.focus();
+      }, 1000);
     }
   };
 

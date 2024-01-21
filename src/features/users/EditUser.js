@@ -8,7 +8,7 @@ const EditUser = () => {
 
   const { user } = useGetUsersQuery("usersList", {
     selectFromResult: ({ data }) => ({
-      user: data?.entites[id],
+      user: data?.entities[id],
     }),
   });
 
