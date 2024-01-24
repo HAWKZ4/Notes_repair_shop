@@ -17,15 +17,16 @@ export const authApiSlice = apiSlice.injectEndpoints({
       }),
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
-          const { data } = await queryFulfilled;
-          console.log(data);
-          
+          // const { data } = await queryFulfilled;
+          // will have the message that send by backend when success like cookie cleared
+          // console.log(data);
+
           setTimeout(() => {
             dispatch(logOut());
             dispatch(apiSlice.util.resetApiState());
           }, 1500);
         } catch (err) {
-          console.log(err);
+          // console.error(err);
         }
       },
     }),
@@ -37,11 +38,11 @@ export const authApiSlice = apiSlice.injectEndpoints({
       async onQueryStarted(arg, { dispatch, queryFulfilled }) {
         try {
           const { data } = await queryFulfilled;
-          console.log(data);
+          // console.log(data);
           const { accessToken } = data;
           dispatch(setCredentials({ accessToken }));
         } catch (err) {
-          console.log(err);
+          console.error(err);
         }
       },
     }),
