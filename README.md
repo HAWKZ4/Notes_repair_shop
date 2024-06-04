@@ -1,6 +1,8 @@
-# Repair Shop Store App
+# System For Repair Shop Store
 
-![technotes04 onrender com_dash_no](https://github.com/HAWKZ4/Notes_repair_shop/assets/108879264/43ddf85a-c8aa-427d-8cb8-2f95ae0ae15f)
+![technotes04 onrender com_dash (1](https://github.com/HAWKZ4/Notes_repair_shop/assets/108879264/f18eb085-1040-478f-ae54-1ea5722f65dd)
+![technotes04 onrender com_dash (2)](https://github.com/HAWKZ4/Notes_repair_shop/assets/108879264/8d8cce76-4ba0-4613-a0e2-a675a53318ae)
+
 
 A Full MERN Stack Application for a repair shop store designed to replace the old system of using sticky notes.
 This application supports multiple users, enabling team-based workflows and real-time collaboration.
