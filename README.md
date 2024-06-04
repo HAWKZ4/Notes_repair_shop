@@ -1,6 +1,7 @@
 # System For Repair Shop Store
 
 ![technotes04 onrender com_dash (1](https://github.com/HAWKZ4/Notes_repair_shop/assets/108879264/f18eb085-1040-478f-ae54-1ea5722f65dd)
+<br/>
 ![technotes04 onrender com_dash (2)](https://github.com/HAWKZ4/Notes_repair_shop/assets/108879264/8d8cce76-4ba0-4613-a0e2-a675a53318ae)
 
 
@@ -44,12 +45,12 @@ This application supports multiple users, enabling team-based workflows and real
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/your-username/repair-shop-store-frontend.git
+    git clone https://github.com/HAWKZ4/Notes_Repair_Shop_API
     ```
 
 2. Navigate to the project directory:
     ```sh
-    cd repair-shop-store-frontend
+    cd Notes_Repair_Shop_API
     ```
 
 3. Install the dependencies:
